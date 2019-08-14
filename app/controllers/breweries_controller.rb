@@ -13,8 +13,10 @@ end
 
 
 def search
+state = params[:state]
+results = Brewery.where(state: state)
 
-  binding.pry
+render json: results
 
 end
 
