@@ -35,7 +35,7 @@ collection.map do |x|
     longitude: x["longitude"],
     latitude: x["latitude"],
     phone: x["phone"],
-    website: x["website"]
+    website: x["website_url"]
   )
 end
 
