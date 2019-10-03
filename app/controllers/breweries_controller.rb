@@ -3,32 +3,32 @@ class BreweriesController < ApplicationController
 
 
 
-def index
+  def index
 
-  breweries = Brewery.all
-  render json: breweries
+    breweries = Brewery.all
+    render json: breweries
 
-end
-
-
-
-def search
-state = params[:state]
-results = Brewery.where(state: state)
-
-render json: results
-
-end
+  end
 
 
 
+  def search
+    state = params[:state]
+    results = Brewery.where(state: state)
 
-def show
+    render json: results
 
-  brewery = Brewery.find(params[:id])
-  render json: brewery
+  end
 
-end
+
+
+
+  def show
+
+    brewery = Brewery.find(params[:id])
+    render json: brewery
+
+  end
 
 
 
